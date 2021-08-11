@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="google-signin-client_id" content="565842303965-cufu0nngiiq40t0rgdmav1bcnv9f1qts.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <title>LOGIN</title>
+
+    <link rel="stylesheet" href="f1.css">
+    <!-- icon  links -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- font  links -->
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+
+    <!-- javascript  links -->
+   
+    <script src="fun.js"></script>
+    <script src="init.js"></script>
+
+</head>
+<body>
+
+  <script src="fb.js"></script>
+
+    
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+<div  id="bo"> 
+<div id="flex">
+        <div class="left"></div>
+        <div class="right">
+            <form id="loggin">
+              
+            <table id="tab">
+                
+                <tr>
+                <th>
+                    <span class="material-icons">person</span>
+                </th>
+                <th>
+                <input type="text" placeholder="Username">
+                </th> 
+                </tr>
+                <tr>
+                <th>
+                <span class="material-icons">lock</span>
+                       
+                </th>
+                <th>
+                <input type="password" placeholder="Password">
+                </th>
+                </tr>
+                
+            </table>
+            <center>
+            <button class="log">Login</button>
+            <hr>
+        <h2 style="margin:10px;">Or</h2>
+        </center>
+        
+            <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            
+            
+            
+<fb:login-button 
+scope="public_profile,email"
+onlogin="checkLoginState();">
+</fb:login-button>
+
+            </form>
+    </div>
+</div>
+            
+
+  <div id="hid">
+
+    <center>
+        <div id="content">
+        <div id="box1"></div>
+        <div id="box2"></div>
+        <div id="box3"></div>
+        <div id="box">
+            <img id="user" height="150px" width="150px">
+            <h1 id="uname">
+               Username 
+            </h1>
+            <h2 id="mail">
+               User@gmail.com 
+            </h2>
+            <a href="login.html"><button class="log">Log Out</button></a>
+           
+        </div>
+    </div>
+    </center>
+  </div>      
+
+            
+
+
+
+</div>
+
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="fun.js"></script>
+<button id="login">Login with Facebook</button>
+            <button style="display:none;" id="logout">Logout</button>           
+            <div id="status">
+            </div>
+-->
+</body>
+</html>
