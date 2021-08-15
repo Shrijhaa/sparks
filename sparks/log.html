@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <meta name="google-signin-client_id" content="565842303965-cufu0nngiiq40t0rgdmav1bcnv9f1qts.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <title>LOGIN</title>
+
+    <link rel="stylesheet" href="f1.css">
+    <!-- icon  links -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+     
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- font  links -->
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Merienda&display=swap" rel="stylesheet">
+    <script src="fun.js"></script>
+    
+
+</head>
+<body>
+    
+    <div id="flex">
+        <div class="left">
+            
+        </div>
+        <div class="right">
+            <form id="login">
+              
+            <table id="tab">
+                
+                <tr>
+                <th>
+                    <span class="material-icons">person</span>
+                </th>
+                <th>
+                <input type="text" placeholder="Username" required>
+                </th> 
+                </tr>
+                <tr>
+                <th>
+                <span class="material-icons">lock</span>
+                       
+                </th>
+                <th>
+                <input type="password" placeholder="Password" required>
+                </th>
+                </tr>
+                
+            </table>
+            <center>
+            <button class="log">Login</button>
+            <hr>
+        <h2 style="margin:10px;">Or</h2>
+        </center>
+        
+            <div class="g-signin2" data-onsuccess="onSignIn">
+                <span class="fa fa-google">
+             
+                </span>
+            </div>
+
+        
+       <!-- <div class="icons">
+            <a>
+               <div class="g-signin2" data-onsuccess="onSignIn">
+                <span class="fa fa-google">
+             
+                    </span>
+
+                </div>
+                
+            </a>
+            <a>
+                <span class="fa fa-facebook"></span>
+                
+            </a>
+            <a>
+                <span class="fa fa-twitter"></span>
+            </a>
+</div>-->
+        
+
+            </form>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <center>
+        <div id="box" style="border:1px solid black;">
+            <img id="user" src="" height="200px" width="200px" style="border:1px solid red;">
+            <h1 id="uname">
+               
+            </h1>
+            <h2 id="mail">
+                
+            </h2>
+    
+            <a id="signout" href="login.html">SIGN OUT</a>
+        </div>
+    </center>
+</body>
+</html>
+
+
+function onSignIn(googleUser) {
+    document.getElementById("flex").style.opacity ='0';
+    
+    document.getElementById("box").style.opacity ='1';
+
+    var profile = googleUser.getBasicProfile();
+    var ID = profile.getId(); // Do not send to your backend! Use an ID token instead.
+   var Name =  profile.getName();
+    var pic= profile.getImageUrl();
+    var Email= profile.getEmail(); // This is null if the 'email' scope is not present.
+    //window.location.replace("http://localhost:8000/Desktop/pooja/web%20development/sparks/profile.html");
+    document.getElementById("uname").innerHTML=Name;
+    document.getElementById("mail").innerHTML=Email;
+    document.getElementById("user").src=pic;
+
+}
+
+
+
+/*.icons{
+    display:inline-flex;
+    width:22vw;
+    
+    padding:10px;
+}
+.icons a{
+    border:2px solid #263238;
+    margin:20px;
+    height: 50px;
+    width:50px;
+    border-radius:50%;
+    padding:10px;
+    display:inline-block;
+    background-position: center;
+    position: relative;
+    
+
+  
+}
+
+.icons a:hover{
+    border-image: linear-gradient(to right, #7f00ff 0%,#e100ff 100%);
+    border-style: solid;
+    border-radius:50%;
+    background-color: rgb(44, 42, 42);
+    box-shadow:0px 0px 8px 5px #7f00ff;
+    
+
+}
+
+
+.icons span{
+    width:25px;
+    font-size: 30px; 
+    text-align: center;
+    
+}
+.fa{
+background: -webkit-linear-gradient(#7f00ff 0%,#e100ff 100%);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+}
+
+*/
+@-webkit-keyframes fader
+{
+
+0%{
+    opacity:0%;
+}
+50%{
+    opacity: 0.5%;
+}
+100%{
+    opacity:1%;
+    
+    
+}
+
+}
+
+/*
+    -webkit-animation-name: fader;
+    -webkit-animation-duration:3s;
+    -webkit-animation-iteration-count: 1;
+    animation-play-state: paused;
+    animation-delay: 4s;
+    
+*/
