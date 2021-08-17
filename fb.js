@@ -54,7 +54,7 @@
     FB.api('/me', {fields: 'name,email,picture'}, function(response) {
       document.getElementById("user").setAttribute('src', response.picture.data.url);
       document.getElementById("fout").style.display="block";
-        
+        document.getElementById("gout").style.display="none";
         document.getElementById("uname").innerHTML=response.name;
         document.getElementById("mail").innerHTML=response.email;
        
