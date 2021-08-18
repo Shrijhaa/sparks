@@ -6,15 +6,11 @@ var fimage = document.querySelector('#user');
 var fname = document.querySelector('#uname');
 var fmail = document.querySelector('#mail');
 var fso = document.querySelector('#fout');
-var gso=document.querySelector('#gout');
 
 fimage.style.visibility = 'hidden';
 fname.style.visibility = 'hidden';
 fmail.style.visibility = 'hidden';
 fso.style.display = 'none';
-
-gso.style.display = 'none';
-
 
 
 window.fbAsyncInit = function() {
@@ -43,9 +39,7 @@ function checkLoginState() {
             FB.login(function(response){
                 if(response.authResponse){
                     getUserData();
-                    document.getElementById("bo").style.animationPlayState="running";
-                    document.getElementById("content").style.animationPlayState="running";
-      
+                    
                 } 
                 else {
                     console.log("Not Authorized.")
@@ -65,6 +59,9 @@ function getUserData(){
         fname.style.visibility = 'visible';
         fmail.style.visibility = 'visible';
         fso.style.display = 'block';
+      document.getElementById("bo").style.animationPlayState="running";
+                    document.getElementById("content").style.animationPlayState="running";
+      
 
     }); 
 }
