@@ -75,9 +75,7 @@ function logout() {
                 fmail.style.visibility = 'hidden';
                 fso.style.display = 'none';
 
-                document.getElementById("bo").style.animationPlayState="paused";
-                document.getElementById("content").style.animationPlayState="paused";
-      
+                
             });
         } else {
             console.log("Unauthorized Logout.")
