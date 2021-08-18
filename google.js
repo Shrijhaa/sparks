@@ -2,9 +2,7 @@
 
 
   var gso = document.querySelector('#gout');
-  var fso = document.querySelector('#fout');
-  
-
+ 
 var gimage = document.querySelector('#user');
 var gname = document.querySelector('#uname');
 var gmail = document.querySelector('#mail');
@@ -24,7 +22,7 @@ function onSuccess(googleUser) {
     gname.style.visibility = 'visible';
     gmail.style.visibility = 'visible';
     gso.style.display = 'block';
-    fso.style.display='none';
+    
     document.getElementById("bo").style.animationPlayState="running";
     document.getElementById("content").style.animationPlayState="running";
         
@@ -54,8 +52,6 @@ function signOut() {
         gmail.style.visibility = 'hidden';
         gso.style.display = 'none';
 
-        document.getElementById("bo").style.animationPlayState="paused";
-    document.getElementById("content").style.animationPlayState="paused";
-      
+       
     });
 }
