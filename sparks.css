@@ -143,11 +143,16 @@ input[placeholder]{
     border-radius: 10px 5px;
     background-color:#f44d5a;
     border:none;
-    margin:30px;
+    margin:10px;
     font-weight: bold;
     color:#181c20;
     font-family: 'Merienda', cursive;
     
+    
+}
+.log a{
+    text-decoration: none;
+    color:black;
     
 }
 
